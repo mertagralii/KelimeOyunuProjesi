@@ -22,7 +22,6 @@ namespace KelimeOyunuProjesi
 
         private void _acilisAtamalari() 
         {
-
             BtnBasla.Visible = true;
             BtnTahminEt.Visible = false;
             BtnKelimeAl.Visible = false;

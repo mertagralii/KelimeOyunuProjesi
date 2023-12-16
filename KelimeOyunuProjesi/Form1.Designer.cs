@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.BtnBasla = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTahmin = new System.Windows.Forms.TextBox();
             this.BtnTahminEt = new System.Windows.Forms.Button();
             this.BtnKelimeAl = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnKapat = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblPuan = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblkelime = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.btnKapat)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,12 +52,12 @@
             this.BtnBasla.UseVisualStyleBackColor = true;
             this.BtnBasla.Click += new System.EventHandler(this.BtnBasla_Click);
             // 
-            // textBox1
+            // txtTahmin
             // 
-            this.textBox1.Location = new System.Drawing.Point(210, 495);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 30);
-            this.textBox1.TabIndex = 2;
+            this.txtTahmin.Location = new System.Drawing.Point(210, 495);
+            this.txtTahmin.Name = "txtTahmin";
+            this.txtTahmin.Size = new System.Drawing.Size(286, 26);
+            this.txtTahmin.TabIndex = 2;
             // 
             // BtnTahminEt
             // 
@@ -78,16 +78,16 @@
             this.BtnKelimeAl.Text = "Kelime Al";
             this.BtnKelimeAl.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // btnKapat
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1143, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.Location = new System.Drawing.Point(1143, 12);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(54, 29);
+            this.btnKapat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnKapat.TabIndex = 6;
+            this.btnKapat.TabStop = false;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // label2
             // 
@@ -95,52 +95,50 @@
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(420, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(294, 55);
+            this.label2.Size = new System.Drawing.Size(238, 44);
             this.label2.TabIndex = 8;
             this.label2.Text = "Kelime Oyunu";
             // 
-            // label3
+            // lblPuan
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(12, 487);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(194, 38);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Tahmin Et :";
+            this.lblPuan.AutoSize = true;
+            this.lblPuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPuan.Location = new System.Drawing.Point(12, 487);
+            this.lblPuan.Name = "lblPuan";
+            this.lblPuan.Size = new System.Drawing.Size(0, 31);
+            this.lblPuan.TabIndex = 9;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblkelime);
             this.groupBox1.Location = new System.Drawing.Point(-2, 131);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1199, 256);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
-            // label1
+            // lblkelime
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(525, 124);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblkelime.AutoSize = true;
+            this.lblkelime.Location = new System.Drawing.Point(525, 124);
+            this.lblkelime.Name = "lblkelime";
+            this.lblkelime.Size = new System.Drawing.Size(0, 20);
+            this.lblkelime.TabIndex = 0;
+            this.lblkelime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 667);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblPuan);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.BtnKelimeAl);
             this.Controls.Add(this.BtnTahminEt);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTahmin);
             this.Controls.Add(this.BtnBasla);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -151,7 +149,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnKapat)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -162,14 +160,14 @@
         #endregion
 
         private System.Windows.Forms.Button BtnBasla;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTahmin;
         private System.Windows.Forms.Button BtnTahminEt;
         private System.Windows.Forms.Button BtnKelimeAl;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnKapat;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblPuan;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblkelime;
     }
 }
 

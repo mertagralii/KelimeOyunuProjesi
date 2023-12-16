@@ -8,11 +8,9 @@ using System.Data;
 
 namespace KelimeOyunuProjesi
 {
-    class Entity
+    public class Entity
     {
-        
-
-
+      
         public string getirKelime() 
         {
             string _kelime = "";

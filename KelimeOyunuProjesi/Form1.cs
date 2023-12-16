@@ -26,7 +26,7 @@ namespace KelimeOyunuProjesi
         {
             BtnBasla.Visible = true;
             BtnTahminEt.Visible = false;
-            BtnKelimeAl.Visible = false;
+            BtnHarfAl.Visible = false;
             txtTahmin.Visible = false;
             lblkelime.Visible = false;
 
@@ -51,8 +51,21 @@ namespace KelimeOyunuProjesi
             }
             else
             {
+                for (int i = 1; i < Kelime.Length; i++)
+                {
+                    int pozisyon = 0;
+                    Button btn = new Button(); // butonun oluşturulması
+                    btn.Name = "btnKelime" + i.ToString();
+                    btn.Location = new Point(10 + pozisyon, 100); // butonun koordinatları
+                    btn.Height = 30; // butonun yüksekliği
+                    btn.Width = 30; // butonun genişliği
+                    btn.BackColor = Color.Fuchsia; // butonun rengi
+                    Controls.Add((Button)btn); // butonun eklenmesi
+                    pozisyon = pozisyon + 35;
+                }
+
                 BtnTahminEt.Visible = true;
-                BtnKelimeAl.Visible = true;
+                BtnHarfAl.Visible = true;
                 txtTahmin.Visible = true;
                 lblkelime.Visible = true;
             }
@@ -61,12 +74,14 @@ namespace KelimeOyunuProjesi
 
         private void BtnTahminEt_Click(object sender, EventArgs e)
         {
-            
+            Random random = new Random();
+            int index = random.Next(1, Kelime.Length + 1);
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
     }
 }

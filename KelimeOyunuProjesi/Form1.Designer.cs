@@ -32,7 +32,7 @@
             this.BtnBasla = new System.Windows.Forms.Button();
             this.txtTahmin = new System.Windows.Forms.TextBox();
             this.BtnTahminEt = new System.Windows.Forms.Button();
-            this.BtnKelimeAl = new System.Windows.Forms.Button();
+            this.BtnHarfAl = new System.Windows.Forms.Button();
             this.btnKapat = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPuan = new System.Windows.Forms.Label();
@@ -69,14 +69,14 @@
             this.BtnTahminEt.UseVisualStyleBackColor = true;
             this.BtnTahminEt.Click += new System.EventHandler(this.BtnTahminEt_Click);
             // 
-            // BtnKelimeAl
+            // BtnHarfAl
             // 
-            this.BtnKelimeAl.Location = new System.Drawing.Point(931, 495);
-            this.BtnKelimeAl.Name = "BtnKelimeAl";
-            this.BtnKelimeAl.Size = new System.Drawing.Size(151, 63);
-            this.BtnKelimeAl.TabIndex = 4;
-            this.BtnKelimeAl.Text = "Kelime Al";
-            this.BtnKelimeAl.UseVisualStyleBackColor = true;
+            this.BtnHarfAl.Location = new System.Drawing.Point(931, 495);
+            this.BtnHarfAl.Name = "BtnHarfAl";
+            this.BtnHarfAl.Size = new System.Drawing.Size(151, 63);
+            this.BtnHarfAl.TabIndex = 4;
+            this.BtnHarfAl.Text = "Harf Al";
+            this.BtnHarfAl.UseVisualStyleBackColor = true;
             // 
             // btnKapat
             // 
@@ -136,7 +136,7 @@
             this.Controls.Add(this.lblPuan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnKapat);
-            this.Controls.Add(this.BtnKelimeAl);
+            this.Controls.Add(this.BtnHarfAl);
             this.Controls.Add(this.BtnTahminEt);
             this.Controls.Add(this.txtTahmin);
             this.Controls.Add(this.BtnBasla);
@@ -162,7 +162,7 @@
         private System.Windows.Forms.Button BtnBasla;
         private System.Windows.Forms.TextBox txtTahmin;
         private System.Windows.Forms.Button BtnTahminEt;
-        private System.Windows.Forms.Button BtnKelimeAl;
+        private System.Windows.Forms.Button BtnHarfAl;
         private System.Windows.Forms.PictureBox btnKapat;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblPuan;

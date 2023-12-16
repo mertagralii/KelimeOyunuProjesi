@@ -46,8 +46,15 @@ namespace KelimeOyunuProjesi
             {
                 MessageBox.Show("Kelime alınırken sorun yaşandı!");
                 _acilisAtamalari();
-            }        
-
+            }
+            else
+            {
+                BtnTahminEt.Visible = true;
+                BtnKelimeAl.Visible = true;
+                txtTahmin.Visible = true;
+                lblkelime.Visible = true;
+            }
+            
         }
 
         private void BtnTahminEt_Click(object sender, EventArgs e)

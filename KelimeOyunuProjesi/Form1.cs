@@ -22,6 +22,7 @@ namespace KelimeOyunuProjesi
         public string Kelime { get; set; }
         public int Uzunluk { get; set; }
         public List<int> harfler = new List<int>();
+        public List<string> Butonlar = new List<string>();
      
         private void _acilisAtamalari() 
         {
@@ -29,8 +30,8 @@ namespace KelimeOyunuProjesi
             BtnTahminEt.Visible = false;
             BtnHarfAl.Visible = false;
             txtTahmin.Visible = false;
-            
-
+            Butonlar.ForEach(x => this.Controls.RemoveByKey(x));
+            txtTahmin.Text = "";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,10 +42,11 @@ namespace KelimeOyunuProjesi
         private void BtnBasla_Click(object sender, EventArgs e)
         {
             harfler = new List<int>();
-
+            Butonlar = new List<string>();
             Entity entity = new Entity();
 
-            Kelime = entity.getirKelime();
+            //Kelime = entity.getirKelime();
+            Kelime = "ARABA";
 
             if (string.IsNullOrEmpty(Kelime))
             {
@@ -59,6 +61,7 @@ namespace KelimeOyunuProjesi
                     harfler.Add(i);
                     Button btn = new Button(); // butonun oluşturulması
                     btn.Name = "btnKelime" + i.ToString();
+                    Butonlar.Add(btn.Name);
                     btn.Location = new Point(450 + pozisyon, 250); // butonun koordinatları
                     btn.Height = 50; // butonun yüksekliği
                     btn.Width = 50; // butonun genişliği
@@ -77,8 +80,16 @@ namespace KelimeOyunuProjesi
 
         private void BtnTahminEt_Click(object sender, EventArgs e)
         {
-            //boş
-
+            if (txtTahmin.Text.ToUpper() == Kelime.ToUpper())
+            {
+                MessageBox.Show("Tebrikler !");
+                _acilisAtamalari();
+      
+            }
+            else 
+            {
+                MessageBox.Show("Yanlış !");
+            }
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -88,11 +99,19 @@ namespace KelimeOyunuProjesi
 
         private void BtnHarfAl_Click(object sender, EventArgs e)
         {
+            int x = harfler.Count();
             Random random = new Random();
-            int index = random.Next(1, harfler.Count + 1);
+            int index = random.Next(0, harfler.Count);
             int index2 = harfler[index];
             string harf = Kelime[index2 - 1].ToString();
-            this.Controls.Find("btnKelime" + index.ToString(), true).FirstOrDefault().Text = harf;
+            harfler.Remove(index2);
+            this.Controls.Find("btnKelime" + (index2).ToString(), true).FirstOrDefault().Text = harf;
+
+            if (harfler.Count == 0)
+            {
+                MessageBox.Show("Oyun Bitti.");
+                _acilisAtamalari();
+            }
         }
     }
 }

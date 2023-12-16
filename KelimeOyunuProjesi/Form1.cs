@@ -21,7 +21,8 @@ namespace KelimeOyunuProjesi
         }
         public string Kelime { get; set; }
         public int Uzunluk { get; set; }
-
+        public List<int> harfler = new List<int>();
+     
         private void _acilisAtamalari() 
         {
             BtnBasla.Visible = true;
@@ -39,6 +40,7 @@ namespace KelimeOyunuProjesi
 
         private void BtnBasla_Click(object sender, EventArgs e)
         {
+            harfler = new List<int>();
 
             Entity entity = new Entity();
 
@@ -54,7 +56,7 @@ namespace KelimeOyunuProjesi
                 int pozisyon = 0;
                 for (int i = 1; i <= Kelime.Length; i++)
                 {
-                    
+                    harfler.Add(i);
                     Button btn = new Button(); // butonun oluşturulması
                     btn.Name = "btnKelime" + i.ToString();
                     btn.Location = new Point(450 + pozisyon, 250); // butonun koordinatları
@@ -75,10 +77,7 @@ namespace KelimeOyunuProjesi
 
         private void BtnTahminEt_Click(object sender, EventArgs e)
         {
-            Random random = new Random();
-            int index = random.Next(1, Kelime.Length + 1);
-            string harf = Kelime[index -1].ToString();
-            this.Controls.Find("btnKelime" + index.ToString(), true).FirstOrDefault().Text = harf;
+            //boş
 
         }
 
@@ -87,5 +86,13 @@ namespace KelimeOyunuProjesi
             Application.Exit();
         }
 
+        private void BtnHarfAl_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            int index = random.Next(1, harfler.Count + 1);
+            int index2 = harfler[index];
+            string harf = Kelime[index2 - 1].ToString();
+            this.Controls.Find("btnKelime" + index.ToString(), true).FirstOrDefault().Text = harf;
+        }
     }
 }

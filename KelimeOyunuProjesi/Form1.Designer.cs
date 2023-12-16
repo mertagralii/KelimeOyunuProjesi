@@ -74,6 +74,7 @@
             this.BtnHarfAl.TabIndex = 4;
             this.BtnHarfAl.Text = "Harf Al";
             this.BtnHarfAl.UseVisualStyleBackColor = true;
+            this.BtnHarfAl.Click += new System.EventHandler(this.BtnHarfAl_Click);
             // 
             // btnKapat
             // 

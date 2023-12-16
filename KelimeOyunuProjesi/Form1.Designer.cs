@@ -36,10 +36,7 @@
             this.btnKapat = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPuan = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblkelime = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnKapat)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnBasla
@@ -56,7 +53,7 @@
             // 
             this.txtTahmin.Location = new System.Drawing.Point(210, 495);
             this.txtTahmin.Name = "txtTahmin";
-            this.txtTahmin.Size = new System.Drawing.Size(286, 26);
+            this.txtTahmin.Size = new System.Drawing.Size(286, 30);
             this.txtTahmin.TabIndex = 2;
             // 
             // BtnTahminEt
@@ -95,7 +92,7 @@
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(420, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 44);
+            this.label2.Size = new System.Drawing.Size(294, 55);
             this.label2.TabIndex = 8;
             this.label2.Text = "Kelime Oyunu";
             // 
@@ -105,34 +102,15 @@
             this.lblPuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPuan.Location = new System.Drawing.Point(12, 487);
             this.lblPuan.Name = "lblPuan";
-            this.lblPuan.Size = new System.Drawing.Size(0, 31);
+            this.lblPuan.Size = new System.Drawing.Size(0, 38);
             this.lblPuan.TabIndex = 9;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblkelime);
-            this.groupBox1.Location = new System.Drawing.Point(-2, 131);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1199, 256);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            // 
-            // lblkelime
-            // 
-            this.lblkelime.AutoSize = true;
-            this.lblkelime.Location = new System.Drawing.Point(525, 124);
-            this.lblkelime.Name = "lblkelime";
-            this.lblkelime.Size = new System.Drawing.Size(0, 20);
-            this.lblkelime.TabIndex = 0;
-            this.lblkelime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 667);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblPuan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnKapat);
@@ -150,8 +128,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnKapat)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,8 +142,6 @@
         private System.Windows.Forms.PictureBox btnKapat;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblPuan;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblkelime;
     }
 }
 

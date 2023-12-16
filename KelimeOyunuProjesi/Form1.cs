@@ -28,7 +28,7 @@ namespace KelimeOyunuProjesi
             BtnTahminEt.Visible = false;
             BtnHarfAl.Visible = false;
             txtTahmin.Visible = false;
-            lblkelime.Visible = false;
+            
 
         }
 
@@ -51,23 +51,24 @@ namespace KelimeOyunuProjesi
             }
             else
             {
-                for (int i = 1; i < Kelime.Length; i++)
+                int pozisyon = 0;
+                for (int i = 1; i <= Kelime.Length; i++)
                 {
-                    int pozisyon = 0;
+                    
                     Button btn = new Button(); // butonun oluşturulması
                     btn.Name = "btnKelime" + i.ToString();
-                    btn.Location = new Point(10 + pozisyon, 100); // butonun koordinatları
-                    btn.Height = 30; // butonun yüksekliği
-                    btn.Width = 30; // butonun genişliği
+                    btn.Location = new Point(450 + pozisyon, 250); // butonun koordinatları
+                    btn.Height = 50; // butonun yüksekliği
+                    btn.Width = 50; // butonun genişliği
                     btn.BackColor = Color.Fuchsia; // butonun rengi
                     Controls.Add((Button)btn); // butonun eklenmesi
-                    pozisyon = pozisyon + 35;
+                    pozisyon = pozisyon + 70;
                 }
 
                 BtnTahminEt.Visible = true;
                 BtnHarfAl.Visible = true;
                 txtTahmin.Visible = true;
-                lblkelime.Visible = true;
+               
             }
             
         }

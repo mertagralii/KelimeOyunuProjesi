@@ -77,6 +77,9 @@ namespace KelimeOyunuProjesi
         {
             Random random = new Random();
             int index = random.Next(1, Kelime.Length + 1);
+            string harf = Kelime[index -1].ToString();
+            this.Controls.Find("btnKelime" + index.ToString(), true).FirstOrDefault().Text = harf;
+
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
